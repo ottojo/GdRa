@@ -12,7 +12,7 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v1
     - name: Compile and Deploy LaTeX to PDF
-      uses: ottojo/uberblatt-action@v1
+      uses: ottojo/uberblatt-action@v4
     - name: GitHub Pages Deploy
       uses: maxheld83/ghpages@v0.2.1
       env:
