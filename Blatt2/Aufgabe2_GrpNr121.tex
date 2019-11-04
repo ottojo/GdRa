@@ -1,0 +1,54 @@
+\documentclass[a4paper]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\author{Dominik Authaler, Jonas Otto}
+\title{Übungsblatt 2: Zahlensysteme}
+
+\begin{document}
+
+\maketitle
+
+\section{Additive Zahlensysteme}
+
+\begin{enumerate}[label=\Roman*)]
+    \item
+        \begin{equation}
+            400_{10} = 500_{10} - 100_{10} = D_R - C_R = \textit{CD}_R
+        \end{equation}
+    \item
+        \begin{equation}
+            133_{10} = 100_{10} + 3_{10} \cdot 10_{10} + 3_{10} \cdot 1_{10} = \textit{CXXXIII}_R
+        \end{equation}
+        
+\end{enumerate}
+
+\section{Polyadische Zahlensysteme}
+
+\section{Wir wollen dann bitte Zahlen!}
+
+\section{Bitwertigkeit}
+\begin{enumerate}[label=\alph*)]
+    \item \emph{MSB} first
+        \begin{enumerate}[label=\Roman*)]
+            \item $ \$\sim*\#_H = 3201_4 = 3 \cdot 64 + 2 \cdot 16 + 1 = 222_{10} $
+
+            \item $ \#\sim\sim\$_H = 1223_4 = 64 + 2 \cdot 16 + 2 \cdot 4 + 3 = 107_{10} $
+
+            \item $ \#\$\$\sim*\sim_H = 133202_4 = \dots = 2018_{10} $
+        \end{enumerate}
+
+    \item \emph{LSB} first
+        \begin{enumerate}[label=\Roman*)]
+            \item $ \$\sim*\#_H = 1023_4 = 75_{10} $
+
+            \item $ \#\sim\sim\$_H = 3221_4 = 233_{10} $
+
+            \item $ \#\$\$\sim*\sim_H = 202331_4 = 2237_{10} $
+        \end{enumerate}
+\end{enumerate}
+
+\end{document}
