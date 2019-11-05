@@ -4,12 +4,26 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage{mathabx}
 \newcommand\mathbfont{\usefont{U}{mathb}{m}{n}}
 
 
-\author{Dominik Authaler, Jonas Otto}
-\title{Übungsblatt 2: Zahlensysteme}
+\title{Grundlagen der Rechnerarchitektur\\ Übungsblatt 1\\Gruppe 121\\}
+\author{ Jonas Otto\\ \and Dominik Authaler \\ 
+}
+
+\date{\today}
+
+
+\def\mayaexpansion{%
+	\mayacntc=\mayacnta\mathbfont
+	\ifnum\mayacntc=0 0\else
+	\rotatebox[origin=c]{-90}{%
+		\loop\ifnum\mayacntc>5\advance\mayacntc by -5\repeat
+		\the\mayacntc\mayacntc=\mayacnta
+		\loop\ifnum\mayacntc>5\advance\mayacntc by -5 5\repeat}%
+	\fi}%
 
 \begin{document}
 
@@ -19,13 +33,13 @@
 
 \begin{enumerate}[label=\Roman*)]
     \item
-        \begin{equation}
+        \begin{equation*}
             400_{10} = 500_{10} - 100_{10} = D_R - C_R = \textit{CD}_R
-        \end{equation}
+        \end{equation*}
     \item
-        \begin{equation}
+        \begin{equation*}
             133_{10} = 100_{10} + 3_{10} \cdot 10_{10} + 3_{10} \cdot 1_{10} = \textit{CXXXIII}_R
-        \end{equation}
+        \end{equation*}
         
 \end{enumerate}
 
@@ -46,6 +60,20 @@
 \end{enumerate}
 
 \section{Wir wollen dann bitte Zahlen!}
+\begin{enumerate}[label=\alph*)]
+	\item BADA55 \\
+	Minimale Basis:  $b = 13$ \\
+	Interpretationsmöglichkeiten: 4
+
+
+	\item DEADC0DE \\
+	Minimale Basis:  $b = 15$ \\
+	Interpretationsmöglichkeiten: 2
+
+	\item C0CAC01A \\
+	Minimale Basis:  $b = 12$ \\
+	Interpretationsmöglichkeiten: 5
+\end{enumerate}
 
 \section{Bitwertigkeit}
 \begin{enumerate}[label=\alph*)]
