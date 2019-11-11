@@ -1,0 +1,73 @@
+\documentclass[a4paper]{article}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathabx}
+\newcommand\mathbfont{\usefont{U}{mathb}{m}{n}}
+
+
+\title{Grundlagen der Rechnerarchitektur\\ Übungsblatt 3\\Gruppe 121\\}
+\author{ Jonas Otto\\ \and Dominik Authaler \\ 
+}
+
+\date{\today}
+
+
+\def\mayaexpansion{%
+	\mayacntc=\mayacnta\mathbfont
+	\ifnum\mayacntc=0 0\else
+	\rotatebox[origin=c]{-90}{%
+		\loop\ifnum\mayacntc>5\advance\mayacntc by -5\repeat
+		\the\mayacntc\mayacntc=\mayacnta
+		\loop\ifnum\mayacntc>5\advance\mayacntc by -5 5\repeat}%
+	\fi}%
+
+\begin{document}
+
+\maketitle
+
+\section{Dezimalzahlen umrechnen}
+
+\begin{enumerate}[label=\alph*)]
+    \item
+        \begin{equation*}
+            1944_{10} = (1024 + 512 + 256 + 128 + 16 + 8)_{10} = 11110011000_{2}
+        \end{equation*}
+    \item
+        \begin{equation*}
+            1476_{10} = (2 \cdot 512 + 7 \cdot 64 + 4 \cdot 1)_{10} = (2 \cdot 8^3 + 7 \cdot 8^2 + 4 \cdot 8^0)_{10} = 2704_{8}
+        \end{equation*}
+    \item  
+        \begin{equation*}
+        	1535_{10} = (5 \cdot 256 + 15 \cdot 16 + 15 \cdot 1)_{10} = (5 \cdot 16^2 + 15 \cdot 16^1 + 15 \cdot 16^0)_{10} = \text{5FF}_{16}
+        \end{equation*}	
+    \item 
+        \begin{equation*}
+        116_{10} = (2 \cdot 49 + 2 \cdot 7 + 4 \cdot 1)_{10} = (2 \cdot 7^2 + 2 \cdot 7^1 + 4 \cdot 7^0)_{10} = 224_{7} 
+        \end{equation*}	
+\end{enumerate}
+
+\section{Ins Dezimalsystem umrechnen}
+\begin{enumerate}[label=\alph*)]
+    \item
+        \begin{equation*}
+        11000111_{2} = (1 + 2 + 4 + 64 + 128)_{10} = (199)_{10}
+        \end{equation*}	
+    \item
+        \begin{equation*}
+        1065_{7} = (1 \cdot 7^3 + 0 \cdot 7^2 + 6 \cdot 7^1 + 5 \cdot 7^0)_{10} = (343 + 42 + 5)_{10} = 390_{10}
+        \end{equation*}	
+    \item
+        \begin{equation*}
+        \text{2EA}_{16} = (2 \cdot 16^2 + 14 \cdot 16^1 + 10 \cdot 16^0)_{10} = (512 + 224 + 10)_{10} = 746_{10}
+        \end{equation*}	
+    \item
+        \begin{equation*}
+        3262_{8} = (3 \cdot 8^3 + 2 \cdot 8^2 + 6 \cdot 8^1 + 2 \cdot 8^0)_{10} = (1536 + 128 + 48 + 2)_{10} = 1714_{10}
+        \end{equation*}	
+\end{enumerate}
+
+\end{document}
