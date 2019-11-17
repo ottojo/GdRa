@@ -6,7 +6,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{mathabx}
-\newcommand\mathbfont{\usefont{U}{mathb}{m}{n}}
+\usepackage{todonotes}
 
 
 \title{Grundlagen der Rechnerarchitektur\\ Übungsblatt 3\\Gruppe 121\\}
@@ -14,16 +14,6 @@
 }
 
 \date{\today}
-
-
-\def\mayaexpansion{%
-	\mayacntc=\mayacnta\mathbfont
-	\ifnum\mayacntc=0 0\else
-	\rotatebox[origin=c]{-90}{%
-		\loop\ifnum\mayacntc>5\advance\mayacntc by -5\repeat
-		\the\mayacntc\mayacntc=\mayacnta
-		\loop\ifnum\mayacntc>5\advance\mayacntc by -5 5\repeat}%
-	\fi}%
 
 \begin{document}
 
@@ -121,5 +111,53 @@
 		19_{10} = (19 \cdot 21^0)_{10} = J_{21}
 	\end{equation*}
 \end{enumerate}
+
+\section{Most Significant Bit}
+\begin{enumerate}[label=\alph*)]
+	\item MSB links:  $1050_8 = (1 \cdot 8^3 + 5 \cdot 8^1)_{10}$ \\
+		  MSB rechts: $1050_8 = (5 \cdot 8^2 + 1 \cdot 8^0)_{10} = 321_{10}$
+		  
+	\item MSB links: $10110010010_2 = (2^1 + 2^4 + 2^7 + 2^8 + 2^{10})_{10} = 1426_{10}$ \\
+		MSB rechts: $10110010010_2 = (2^0 + 2^2 + 2^3 + 2^6 + 2^9)_{10} = 589_{10}$
+	
+	\item MSB links: $4242_{10} = 4242_{10}$ \\
+		  MSB rechts: $4242_{10} = 2424_{10}$ 
+		  
+ 	\item MSB links: $A47_{14} = (7 \cdot 14^0 + 4 \cdot 14^1 + 10 \cdot 14^2)_{10} = 2023_{10} = 133213_4$
+ 	\begin{align*}
+ 		2023 : 4 &= 505& R3 \\
+ 		505 : 4 &= 126& R1 \\
+ 		126 : 4 &= 31& R2 \\
+ 		31 : 4 &= 7& R3 \\
+ 		7 : 4 &= 1& R3 \\
+ 		1 : 4 &= 0& R1
+ 	\end{align*}
+\end{enumerate}
+		MSB rechts: $A47_{14} = (7 \cdot 14^2 + 4 \cdot 14^1 + 10 \cdot 14^0)_{10} = 1438_{10} = 112132_{4}$
+		\begin{align*}
+		1438 : 4 &= 359& R2 \\
+		359 : 4 &= 89& R3 \\
+		89 : 4 &= 22& R1 \\
+		22 : 4 &= 5& R2 \\
+		5 : 4 &= 1& R1 \\
+		1 : 4 &= 0& R1
+		\end{align*}
+		
+\section{Knobelaufgabe}
+$65243_b \stackrel{!}{=} 27299_{10}$, wegen $65424_{10} > 27299_{10}$ muss $0 < b < 10$ gelten. Im Folgenden werden daher die wenigen möglichen Basen ausprobiert:
+\begin{align*}
+	65243_{9} = (6\cdot9^4 + 5 \cdot 9^3 + 2 \cdot 9^2 + 4 \cdot 9^1 + 3 \cdot 9^0)_{10} = 43212_{10}. \\
+	65243_{8} = (6\cdot8^4 + 5 \cdot 8^3 + 2 \cdot 8^2 + 4 \cdot 8^1 + 3 \cdot 8^0)_{10} = 27299_{10}. 
+\end{align*}
+Die gesuchte Basis ist also $b = 8$.
+
+\section{Festkomma}
+	\begin{enumerate}[label=\alph*)]
+		\item 
+		$10,625_{10} = (8 + 2 + 0,5 + 0,125)_{10} = (2^3 + 2^1 + 2^{-1} + 2^{-3})_{10} = 1010,101_2$
+		
+		\item 
+		$101101,1101_2 = (2^5 + 2^3  + 2^2 + 2^0 + 2^{-2} + 2^{-2} + 2^{-4}) = 45,8125_{10}$
+	\end{enumerate}
 \end{document}
 	
