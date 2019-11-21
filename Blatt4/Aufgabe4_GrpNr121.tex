@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{amsmath}
+\usepackage{array}
+\newcolumntype{L}{>{$}c<{$}}
 
 
 \title{Grundlagen der Rechnerarchitektur\\ Übungsblatt 4\\Gruppe 121\\}
@@ -23,6 +25,24 @@
       b-1-Komplement: $01111010_2 = 122_{10}$
 \item b-Komplement: $1111111_2 = -\text{NOT}(1111110)_2 = -1_{10}$ \\
       b-1-Komplement: $1111111_2 = -\text{NOT}(1111111)_2 = -0_{10}$
+\end{enumerate}
+
+\section{Aufgabe 2: Multiplikation und Division}
+\begin{enumerate}[label=\alph*)]
+\item $10011010_2 \cdot 111001_2$\\
+    \begin{equation}
+    \begin{split}
+        10011010 \cdot &111001\\
+        \cline{1-2}
+                1001101&0\\
+                 100110&1\\
+                  10011&010\\
+                     10&011010\\
+        \cline{1-2}
+              010001001&001010\\
+    \end{split}
+    \end{equation}
+\item $011101100001_2 \div 10110_2$
 \end{enumerate}
 
 \end{document}
