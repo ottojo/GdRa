@@ -32,6 +32,18 @@ Die Schaltalgebra ist eine spezielle Form der Boolschen Algebra. Während bei ei
             &\stackrel{P5}{=} x_2 \cdot \overline{x_1}
         \end{aligned}
         \end{equation}
+
+    \item
+        \begin{equation}
+        \begin{aligned}
+            h(x_1, x_2, x_3, x_4) &= (x_1 \cdot x_2) + (x_1 \cdot x_3) + x_1 \cdot (x_2 + x_3 \cdot x_4) + x_1 \\
+            &\stackrel{P4}{=} x_1 \cdot (x_2 + x_3) + x_1 \cdot (x_2 + x_3 \cdot x_4) + x_1 \\
+            &\stackrel{P4}{=} x_1 \cdot ((x_2 + x_3) + (x_2 + x_3 \cdot x_4) + 1) \\
+            &\stackrel{P2', P6'}{=} x_1 \cdot ( x_2 + x_3 + x_2 + x_3 \cdot x_4) \\
+            &\stackrel{P3'}{=} x_1 \cdot ( x_2 + x_3 + x_3 \cdot x_4) \\
+            &\stackrel{P11'}{=} x_1 \cdot ( x_2 + x_3)
+        \end{aligned}
+        \end{equation}
 \end{enumerate}
 
 \section*{Aufgabe 3}
