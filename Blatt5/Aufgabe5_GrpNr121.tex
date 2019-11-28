@@ -21,6 +21,18 @@
 Die Schaltalgebra ist eine spezielle Form der Boolschen Algebra. Während bei einer Boolschen Algebra nur festgelegt ist, dass sie auf einer bestimmten Trägermenge und mit bestimmten Operationen aufgebaut ist, sind diese in der Schaltalgebra genauer spezifiziert. Die Trägermenge der Schaltalgebra ist {0, 1} und die Operationen sind so gewählt, dass sie mittels Schaltungselementen realisiert werden können.
 
 \section*{Aufgabe 2}
+\begin{enumerate}[label=\alph*)]
+    \item
+        \begin{equation}
+        \begin{aligned}
+            g(x1, x2) &= \overline{\overline{x_1 \cdot x_2} \cdot x_1} \\
+            &\stackrel{P8}{=} (x_1 \cdot x_2) + \overline{x_1} \\
+            &\stackrel{P4'}{=} (x_1 + \overline{x_1}) \cdot (x_2 \cdot \overline{x_1}) \\
+            &\stackrel{P9'}{=} 1 \cdot (x_2 \cdot \overline{x_1}) \\
+            &\stackrel{P5}{=} x_2 \cdot \overline{x_1}
+        \end{aligned}
+        \end{equation}
+\end{enumerate}
 
 \section*{Aufgabe 3}
 \section*{Aufgabe 4}
