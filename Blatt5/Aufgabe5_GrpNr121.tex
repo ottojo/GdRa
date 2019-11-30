@@ -136,7 +136,56 @@ Die zu beweisenden Aussagen dieser Aufgabe sind auch als \textit{De Morgan'sche 
 \end{aligned}
 \end{equation}
 
+\clearpage
 \section*{Aufgabe 5}
+\begin{enumerate}[label=\alph*)]
+	\item 
+	\begin{enumerate}[label=\roman*)]
+		\item Wahrheitstabelle:
+		\begin{figure}[h!]
+			\centering
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				$x_2$ & $x_1$ & $x_0$ & $f(x_2, x_1, x_0)$ \\
+				\hline
+				0 & 0 & 0 & 0 \\
+				0 & 0 & 1 & 1 \\
+				0 & 1 & 0 & 0 \\
+				0 & 1 & 1 & 1 \\
+				1 & 0 & 0 & 0 \\
+				1 & 0 & 1 & 1 \\
+				1 & 1 & 0 & 0 \\
+				1 & 1 & 1 & 1 \\
+				\hline
+			\end{tabular}
+		\caption{Wahrheitstabelle der Funktion $f(x_2, x_1, x_0)$}
+		\end{figure}
+	
+		\item 
+		Disjunktive kanonische Normalform:\\ 
+		\begin{equation}
+			f(x_2, x_1, x_0) = \overline{x_2x_1}x_0 + \overline{x_2}x_1x_0 + x_2\overline{x_1}x_0 + x_2x_1x_0
+		\end{equation}
+		
+		Konjunktive kanonische Normalform: \\
+		\begin{equation}
+			f(x_2, x_1, x_0) = (\overline{x_2} + \overline{x_1} + \overline{x_0}) \cdot (\overline{x_2} + x_1 + \overline{x_0}) \cdot (x_2 + \overline{x_1} + \overline{x_0}) \cdot (x_2 + x_1 + \overline{x_0})
+		\end{equation}
+		
+		\item 
+		\begin{equation}
+		\begin{aligned}
+			f(x_2, x_1, x_0) &= & \overline{x_2x_1}x_0 + \overline{x_2}x_1x_0 + x_2\overline{x_1}x_0 + x_2x_1x_0 \\
+			&\stackrel{P4}{=} & x_0 \cdot (\overline{x_2x_1} + \overline{x_2}x_1 + x_2\overline{x_1} + x_2x_1) \\
+			&\stackrel{P1'}{=} & x_0 \cdot (\overline{x_2x_1} + x_2x_1 + \overline{x_2}x_1 + x_2\overline{x_1}) \\
+			&\stackrel{P2'}{=} & x_0 \cdot ((\overline{x_2x_1} + x_2x_1) + ( \overline{x_2}x_1 + x_2\overline{x_1})) \\
+			&\stackrel{P9'}{=} & x_0 \cdot (1 + 1) \\
+			&\stackrel{P6'}{=} & x_0 \cdot 1 \\
+			&\stackrel{P5}{=} & x_0 \\
+		\end{aligned}
+		\end{equation}
+	\end{enumerate}
+\end{enumerate}
 \clearpage
 \section*{Aufgabe 6}
 Die später verwendeten Beziehungen $\overline{a + a} = \overline{a}$ und $\overline{a \cdot a} = \overline{a}$ ergeben sich aus P3' bzw. P3.
