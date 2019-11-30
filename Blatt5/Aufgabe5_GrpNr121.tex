@@ -166,6 +166,19 @@ Die später verwendeten Beziehungen $\overline{a + a} = \overline{a}$ und $\over
 		\end{aligned}
 		\end{equation}
 	\end{enumerate}
+
+	\item $(x_1 \cdot \overline{x_2}) + (\overline{x_2} \cdot \overline{x_3}) + (x_3 \cdot \overline{x_0}) + (x_0 \cdot \overline{x_1})$
+	\begin{equation}
+	\begin{aligned}
+		&&(x_1 \cdot \overline{x_2}) + (\overline{x_2} \cdot \overline{x_3}) + (x_3 \cdot \overline{x_0}) + (x_0 \cdot \overline{x_1}) \\
+		&\stackrel{P7}{=} &\overline{\overline{(x_1 \cdot \overline{x_2}) + (\overline{x_2} \cdot \overline{x_3}) + (x_3 \cdot \overline{x_0}) + (x_0 \cdot \overline{x_1})}} \\
+		&\stackrel{P2'}{=} &\overline{\overline{((x_1 \cdot \overline{x_2}) + (\overline{x_2} \cdot \overline{x_3})) + ((x_3 \cdot \overline{x_0}) + (x_0 \cdot \overline{x_1}))}} \\
+		&\stackrel{P8'}{=} &\overline{\overline{((x_1 \cdot \overline{x_2}) + (\overline{x_2} \cdot \overline{x_3}))} \cdot \overline{((x_3 \cdot \overline{x_0}) + (x_0 \cdot \overline{x_1}))}} \\
+		&\stackrel{P8'}{=} &\overline{\overline{(x_1 \cdot \overline{x_2})} \cdot \overline{(\overline{x_2} \cdot \overline{x_3})} \cdot \overline{(x_3 \cdot \overline{x_0})} \cdot \overline{(x_0 \cdot \overline{x_1})}} \\
+		&\stackrel{\overline{a \cdot a} = \overline{a}}{=} &\overline{\overline{x_1 \cdot \overline{x_2 \cdot x_2}} \cdot \overline{\overline{x_2 \cdot x_2} \cdot \overline{x_3 \cdot x_3}} \cdot \overline{x_3 \cdot \overline{x_0 \cdot x_0}} \cdot \overline{x_0 \cdot \overline{x_1 \cdot x_1}}} \\
+		&\stackrel{\overline{a \cdot 1} = \overline{a}}{=} &\overline{\overline{\overline{\overline{x_1 \cdot \overline{x_2 \cdot x_2}} \cdot \overline{\overline{x_2 \cdot x_2} \cdot \overline{x_3 \cdot x_3}}} \cdot 1} \cdot \overline{\overline{\overline{x_3 \cdot \overline{x_0 \cdot x_0}} \cdot \overline{x_0 \cdot \overline{x_1 \cdot x_1}}} \cdot 1}}
+	\end{aligned}
+	\end{equation}
 	
 \end{enumerate}
 \end{document}
