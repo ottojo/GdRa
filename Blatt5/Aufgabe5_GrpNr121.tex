@@ -137,6 +137,36 @@ Die zu beweisenden Aussagen dieser Aufgabe sind auch als \textit{De Morgan'sche 
 \end{equation}
 
 \section*{Aufgabe 5}
+\clearpage
 \section*{Aufgabe 6}
+Die später verwendeten Beziehungen $\overline{a + a} = \overline{a}$ und $\overline{a \cdot a} = \overline{a}$ ergeben sich aus P3' bzw. P3.
+\begin{enumerate}[label=\alph*)]
+	\item $x_1 \oplus x_2 $
+	\begin{enumerate}
+		\item Mittels NOR:
+		\begin{equation}
+		\begin{aligned}
+			&&x_1 \oplus x_2 \\
+			&\stackrel{Definition}{=} &x_1 \cdot \overline{x_2} + \overline{x_1} \cdot x_2 \\
+			&\stackrel{P7}{=} &\overline{\overline{x_1 \cdot \overline{x_2}}} + \overline{\overline{\overline{x_1} \cdot x_2}} \\
+			&\stackrel{P8}{= } &\overline{\overline{x_1} + x_2} + \overline{x_1 + \overline{x_2}} \\
+			&\stackrel{\overline{a + a} = \overline{a}}{=} & \overline{\overline{x_1 + x_1} + x_2} + \overline{x_1 + \overline{x_2 + x_2}} \\
+			&\stackrel{\overline{\overline{a} + \overline{a}} = a}{=} &\overline{\overline{\overline{\overline{x_1 + x_1} + x_2} + \overline{x_1 + \overline{x_2 + x_2}}} + \overline{\overline{\overline{x_1 + x_1} + x_2} + \overline{x_1 + \overline{x_2 + x_2}}}}
+		\end{aligned}
+		\end{equation} 
+		
+		\item Mittels NAND:
+		\begin{equation}
+		\begin{aligned}
+			&&x_1 \oplus x_2 \\
+			&\stackrel{Definition}{=} &x_1 \cdot \overline{x_2} + \overline{x_1} \cdot x_2 \\
+			&\stackrel{P7}{=} &\overline{\overline{x_1 \cdot \overline{x_2} + \overline{x_1} \cdot x_2}} \\
+			&\stackrel{P8'}{=} &\overline{\overline{a \cdot \overline{b}} \cdot \overline{\overline{a} \cdot b}} \\
+			&\stackrel{\overline{a} = \overline{a \cdot a}}{=} &\overline{\overline{a \cdot \overline{b \cdot b}} \cdot \overline{\overline{a \cdot a} \cdot b}}
+		\end{aligned}
+		\end{equation}
+	\end{enumerate}
+	
+\end{enumerate}
 \end{document}
 	
