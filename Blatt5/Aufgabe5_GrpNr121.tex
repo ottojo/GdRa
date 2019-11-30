@@ -56,6 +56,45 @@ Die Schaltalgebra ist eine spezielle Form der Boolschen Algebra. Während bei ei
 \end{enumerate}
 
 \section*{Aufgabe 3}
+	Die zu beweisenden Aussagen dieser Aufgabe sind auch als \textit{De Morgan'sche Regeln} bekannt.
+
+\begin{enumerate}[label=\alph*)]
+	\item
+	\begin{equation}
+	\begin{aligned}
+	\overline{a + b} \stackrel{!}{=} \overline{a} \cdot \overline{b} \\
+	\stackrel{P9, P9'}{\Longleftrightarrow} \overline{a} \cdot \overline{b} + \overline{\overline{a + b}} = 1 \wedge \overline{a} \cdot \overline{b} \cdot (\overline{\overline{a + b}}) = 0 
+	\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\begin{aligned}
+	\stackrel{P9'}{\Longleftrightarrow} \overline{a} \cdot \overline{b} + \overline{\overline{a+b}} = 1 \\
+	\stackrel{P7}{\Longleftrightarrow} \overline{a} \cdot \overline{b} + (a + b) = 1 \\
+	\Longleftrightarrow \overline{a} \cdot \overline{b} + a + b = 1 \\
+	\stackrel{Kleiner Konsens}{\Longleftrightarrow} a + \overline{b} + b = 1 \\
+	\stackrel{P9'}{\Longleftrightarrow} a + 1 = 1 \\
+	\stackrel{P6'}{\Longleftrightarrow} 1 = 1
+	\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\begin{aligned}
+	\stackrel{P9'}{\Longleftrightarrow} \overline{a} \cdot \overline{b} \cdot (\overline{\overline{a+b}}) = 0 \\
+	\stackrel{P7}{\Longleftrightarrow} \overline{a} \cdot \overline{b} \cdot (a + b) = 1 \\
+	\stackrel{P4}{\Longleftrightarrow} \overline{a} \cdot (\overline{b} \cdot a + \overline{b} \cdot b) = 0
+	\\
+	\stackrel{P9}{\Longleftrightarrow} \overline{a} \cdot (\overline{b} \cdot a + 0) = 0
+	\\
+	\stackrel{P5'}{\Longleftrightarrow} \overline{b} \cdot (\overline{a} \cdot a) = 0
+	\\
+	\stackrel{P9}{\Longleftrightarrow} \overline{b} \cdot 0 = 0
+	\\
+	\stackrel{P6}{\Longleftrightarrow} 0 = 0
+	\end{aligned}
+	\end{equation}
+\end{enumerate}
+
 \section*{Aufgabe 4}
 \begin{equation}
 \begin{aligned}
