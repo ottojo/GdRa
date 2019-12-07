@@ -65,13 +65,27 @@
 	
 	\clearpage
 	\item Algebraische Minimierung:
-	%\begin{equation*}
-	%\begin{aligned}
-	%	f_{1, DNF} &= f_{1, DKNF} \\ &= \overline{x_0 x_1 x_2 x_3} + x_0 x_1\overline{x_2 x_3} + x_0 \overline{x_1} x_2 \overline{x_3} + \overline{x_0} x_1 x_2 \overline{x_3} + x_0 x_1 x_2 \overline{x_3} + \overline{x_0 x_1 x_2} x_3 
-	%	+ x_0 \overline{x_1 x_2} x_3 \\ &+ \overline{x_0} x_1 \overline{x_2} x_3 + x_0 x_1 \overline{x_2} x_3 + \overline{x_0 x_1} x_2 x_3 + x_0 \overline{x_1} x_2 x_3 + \overline{x_0}x_1 x_2 x_3 + x_0 x_1 x_2 x_3 \\
-	%	&\stackrel{P4}{=} \overline{x_0 x_1 x_2} \cdot (\overline{x_3} + x_3) + x_0x_1x_2 \cdot (\overline{x_3} + x_3) + \overline{
-	%\end{aligned}
-	%\end{equation*}
+	\begin{equation*}
+            \begin{aligned}
+                f_{1, DNF} &= f_{1, DKNF} \\
+                           &= \overline{x_0 x_1 x_2 x_3} + x_0 x_1\overline{x_2 x_3} + x_0 \overline{x_1} x_2 \overline{x_3} + \overline{x_0} x_1 x_2 \overline{x_3} + x_0 x_1 x_2 \overline{x_3} + \overline{x_0 x_1 x_2} x_3 + x_0 \overline{x_1 x_2} x_3 \\
+                           &+ \overline{x_0} x_1 \overline{x_2} x_3 + x_0 x_1 \overline{x_2} x_3 + \overline{x_0 x_1} x_2 x_3 + x_0 \overline{x_1} x_2 x_3 + \overline{x_0}x_1 x_2 x_3 + x_0 x_1 x_2 x_3 \\
+                           &\stackrel{P4, P6'}{=} \overline{x_0 x_1 x_2 x_3} + x_0 x_1\overline{x_2 x_3} + x_0 \overline{x_1} x_2 \overline{x_3} + \overline{x_0} x_1 x_2 \overline{x_3} + x_0 x_1 x_2 \overline{x_3} +  x_3 \\
+                           &\stackrel{}{=} \bar{x}_0 \bar{x}_1 \bar{x}_2 + x_0 x_1 \bar{x}_2 + x_0 \bar{x}_1 x_2 + \bar{x}_0 x_1 x_2 + x_0 x_1 x_2 +  x_3 \\
+                           &\stackrel{}{=} x_3 + x_2 (x_0 \bar{x}_1 + \bar{x}_0 x_1 + x_0 x_1) + \bar{x}_2 (\bar{x}_0 \bar{x}_1 + x_0 x_1) \\
+                           &\stackrel{P8}{=} x_3 + x_2 (x_1 + x_0) + \bar{x}_2 (\bar{x}_0 \bar{x}_1 + x_0 x_1)
+            \end{aligned}
+	\end{equation*}
+	\begin{equation*}
+            \begin{aligned}
+                f_{1, KNF} &= f_{1, KKNF} \\
+                           &= (x_0 + x_1 + x_2 + \overline{x_3}) \cdot (x_0 + \overline{x_1} + x_2 + \overline{x_3}) \cdot (\overline{x_0} + \overline{x_1} + x_2 + \overline{x_3})\\ &\cdot (x_0 + x_1 + \overline{x_2} + \overline{x_3}) \cdot (x_0 + \overline{x_1} + \overline{x_2} + \overline{x_3}) \\
+                           &\stackrel{P4'}{=} \bar{x}_3 + (x_0+x_1+x_2)(x_0+\bar{x}_1+x_2)(\bar{x}_0+\bar{x}_1+x_2)(x_0+x_1+\bar{x}_2)(x_0+\bar{x}_1+\bar{x}_2) \\
+                           &\stackrel{P4'}{=} \bar{x}_3 + (x_0+(x_1+x_2)(\bar{x}_1+x_2)(x_1+\bar{x}_2)(\bar{x}_1+\bar{x}_2))(\bar{x}_0+\bar{x}_1+X_2) \\
+                           &\stackrel{P5'}{=} \bar{x}_3 + x_0 (\bar{x}_0+\bar{x}_1+x_2) \\
+                           &\stackrel{P9, P4}{=} \bar{x}_3+x_0\bar{x}_1 + x_0x_2
+            \end{aligned}
+	\end{equation*}
 	
 	\item Karnaugh-Veitch:
 	\begin{enumerate}[label=\roman*)]
