@@ -5,6 +5,7 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{array}
+\usepackage{graphicx}
 \newcolumntype{L}{>{$}c<{$}}
 
 
@@ -60,6 +61,45 @@
 		f_{2, KKNF} = &(x_0 + x_1 + x_2 + \overline{x_3}) \cdot (x_0 + \overline{x_1} + x_2 + \overline{x_3}) \cdot (\overline{x_0} + \overline{x_1} + x_2 + \overline{x_3})\\ &\cdot (x_0 + x_1 + \overline{x_2} + \overline{x_3}) \cdot (x_0 + \overline{x_1} + \overline{x_2} + \overline{x_3})
 	\end{aligned}
 	\end{equation*}
+	
+	\clearpage
+	\item Algebraische Minimierung:
+	%\begin{equation*}
+	%\begin{aligned}
+	%	f_{1, DNF} &= f_{1, DKNF} \\ &= \overline{x_0 x_1 x_2 x_3} + x_0 x_1\overline{x_2 x_3} + x_0 \overline{x_1} x_2 \overline{x_3} + \overline{x_0} x_1 x_2 \overline{x_3} + x_0 x_1 x_2 \overline{x_3} + \overline{x_0 x_1 x_2} x_3 
+	%	+ x_0 \overline{x_1 x_2} x_3 \\ &+ \overline{x_0} x_1 \overline{x_2} x_3 + x_0 x_1 \overline{x_2} x_3 + \overline{x_0 x_1} x_2 x_3 + x_0 \overline{x_1} x_2 x_3 + \overline{x_0}x_1 x_2 x_3 + x_0 x_1 x_2 x_3 \\
+	%	&\stackrel{P4}{=} \overline{x_0 x_1 x_2} \cdot (\overline{x_3} + x_3) + x_0x_1x_2 \cdot (\overline{x_3} + x_3) + \overline{
+	%\end{aligned}
+	%\end{equation*}
+	
+	\item Karnaugh-Veitch:
+	\begin{enumerate}[label=\roman*)]
+		\item minimale disjunkitve Normalform $f_{3, KV, DNF}$ für Segment 3:
+		
+		\begin{figure}[h]
+			\begin{center}
+				\includegraphics[scale=0.25]{KV-Segment-3.png}
+			\end{center}
+			\caption{KV-Diagramm für Segment 3}
+		\end{figure}
+	
+		\begin{equation}
+			f_{3, KV, DNF} = x_3 + x_1x_2 + x_0x_2 + \overline{x_0 x_1 x_2}
+		\end{equation}
+		
+		
+		\item minimale konjunktive Normalform $f_{4, KV, KNF}$ für Segment 4:
+		\begin{figure}[h]
+			\begin{center}
+				\includegraphics[scale=0.25]{KV-Segment-4.png}
+			\end{center}
+			\caption{KV-Diagramm für Segment 4}
+		\end{figure}
+	
+		\begin{equation}
+			f_{3, KV, DNF} = (x_0 + \overline{x_2} + \overline{x_3}) \cdot (\overline{x_0} + \overline{x_1} + \overline{x_3}) \cdot (x_0 + x_1 + \overline{x_3})
+		\end{equation}
+	\end{enumerate}
 \end{enumerate}
 
 \end{document}
