@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{graphicx}
+\usepackage{xcolor}
 \newcolumntype{L}{>{$}c<{$}}
 
 
@@ -99,6 +100,68 @@
 		\begin{equation}
 			f_{3, KV, DNF} = (x_0 + \overline{x_2} + \overline{x_3}) \cdot (\overline{x_0} + \overline{x_1} + \overline{x_3}) \cdot (x_0 + x_1 + \overline{x_3})
 		\end{equation}
+	\end{enumerate}
+
+	\item Quine McCluskey\\
+	Terme, welche nicht zur weiteren Minimierung genutzt werden konnten sind farblich hervorgehoben. 
+	\begin{enumerate}[label=\roman*)]
+		\item Segment 5: 
+		\begin{equation*}
+		\begin{aligned}
+			f_{5, DKNF} =& \overline{x_0 x_1 x_2 x_3} 
+			+ x_0 \overline{x_1} x_2 \overline{x_3} 
+			+ \overline{x_0} x_1 x_2 \overline{x_3} 
+			+ x_0 x_1 x_2 \overline{x_3} 
+			+ \overline{x_0 x_1 x_2} x_3 \\ 
+			&+ x_0 \overline{x_1 x_2} x_3 
+			+ \overline{x_0} x_1 \overline{x_2} x_3 
+			+ x_0 x_1 \overline{x_2} x_3 
+			+ \overline{x_0 x_1} x_2 x_3 \\ 
+			&+ x_0 \overline{x_1} x_2 x_3 
+			+ \overline{x_0} x_1 x_2 x_3 
+			+ x_0 x_1 x_2 x_3
+		\end{aligned}
+		\end{equation*}
+		
+		\begin{align*}
+			Q_{4,4} &= \{\overline{x_0 x_1 x_2 x_3}\}\\
+			Q_{4,3} &= \{\overline{x_0 x_1 x_2} x_3\}\\
+			Q_{4,2} &= \{x_0 \overline{x_1} x_2 \overline{x_3},\hspace{0.2cm} \overline{x_0} x_1 x_2 \overline{x_3},\hspace{0.2cm} \overline{x_0} x_1 \overline{x_2} x_3,\hspace{0.2cm} 
+			x_0 \overline{x_1 x_2} x_3,\hspace{0.2cm} 
+			\overline{x_0 x_1} x_2 x_3
+			\}\\
+			Q_{4,1} &= \{x_0 x_1 x_2 \overline{x_3},\hspace{0.2cm} x_0 x_1 \overline{x_2} x_3,\hspace{0.2cm} 
+			x_0 \overline{x_1} x_2 x_3,\hspace{0.2cm} \overline{x_0} x_1 x_2 x_3
+				\}\\
+			Q_{4,0} &= \{x_0 x_1 x_2 x_3\}\\
+			\hline
+			Q_{3,3} &= \{\textcolor{blue}{\overline{x_0x_1x_2}}\}\\
+			Q_{3,2} &= \{\overline{x_0x_2}x_3,\hspace{0.2cm} \overline{x_1x_2}x_3,\hspace{0.2cm}
+			\overline{x_0x_1}x_3\}\\
+			Q_{3,1} &= \{x_0x_2\overline{x_3},\hspace{0.2cm} x_0\overline{x_1}x_2,\hspace{0.2cm} 
+			x_1x_2\overline{x_3},\hspace{0.2cm} 
+			\overline{x_0}x_1x_2,\hspace{0.2cm} 
+			x_1\overline{x_2}x_3,\hspace{0.2cm} 
+			\overline{x_0}x_1x_3,\hspace{0.2cm} 
+			x_0\overline{x_1}x_3,\hspace{0.2cm} 
+			\overline{x_1}x_2x_3,\hspace{0.2cm}
+			\overline{x_0}x_2x_3\}\\
+			Q_{3,0} &= \{x_0x_1x_2,\hspace{0.2cm} 
+			x_0x_1x_3,\hspace{0.2cm}
+			x_0x_2x_3,\hspace{0.2cm}
+			x_1x_2x_3\}\\
+			\hline
+			Q_{2,2} &= \{ \}\\
+			Q_{2,1} &= \{\overline{x_0}x_3,\hspace{0.2cm} \overline{x_2}x_3,\hspace{0.2cm} \overline{x_1}x_3\}\\
+			Q_{2,0} &= \{\textcolor{blue}{x_0x_2},\hspace{0.2cm}\textcolor{blue}{x_1x_2},\hspace{0.2cm} x_1x_3,\hspace{0.2cm} x_0x_3,\hspace{0.2cm}x_2x_3\}\\
+			\hline
+			Q_{1,1} &= \{ \}\\
+			Q_{1,0} &= \{\textcolor{blue}{x_3}\}\\
+		\end{align*}
+		
+		\begin{equation*}
+		f_{5, QMC} = \overline{x_0x_1x_2} + x_0x_2 + x_1x_2 + x_3
+		\end{equation*}
 	\end{enumerate}
 \end{enumerate}
 
