@@ -1,3 +1,7 @@
+all: Aufgabe4_GrpNr121.pdf
+	$(info ARTIFACTS:Aufgabe4_GrpNr121.tex)
+
+.PHONY: Aufgabe4_GrpNr121.pdf
 Aufgabe4_GrpNr121.pdf: Aufgabe4_GrpNr121.tex
 	latexmk -pdf Aufgabe4_GrpNr121.tex
 
